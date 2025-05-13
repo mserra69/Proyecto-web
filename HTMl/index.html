@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Home - Reseñas de Videojuegos</title>
 </head>
 <body>
-    
+
+    <header>
+        <div class="logo">
+            <h1>GameReviews</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Bienvenido a GameReview</h2>
+            <p>Encuentra reseñas honestas de tus videojuegos favoritos.</p>
+            <a href="reseñas.html" class="btn">Ver Reseñas</a>
+        </section>
+
+        <section class="destacados">
+            <h3>Reseñas Destacadas</h3>
+            <div class="juegos-grid">
+                <div class="juego-card">
+                    <img src="img/juego1.jpg" alt="Juego 1">
+                    <h4><a href="reseña1.html">R.E.P.O</a></h4>
+                    <p>PC</p>
+                </div>
+                <div class="juego-card">
+                    <img src="img/juego2.jpg" alt="Juego 2">
+                    <h4><a href="reseña2.html">Rainbow Six Siege</a></h4>
+                    <p>PC | PS4/PS5 | XBOX </p>
+                </div>
+                <div class="juego-card">
+                    <img src="img/juego3.jpg" alt="Juego 3">
+                    <h4><a href="reseña3.html">Mario Kart 8 Deluxe</a></h4>
+                    <p>Nintendo Switch</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GameReviews. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>

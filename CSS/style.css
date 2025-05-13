@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
+
+header {
+    background-color: #16213e;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #00aaff;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #eaeaea;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00aaff;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #00aaff;
+    padding: 10px 20px;
+    color: #1a1a2e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background-color: #0088cc;
+}
+
+.destacados {
+    padding: 50px 20px;
+    background-color: #0f3460;
+    text-align: center;
+}
+
+.destacados h3 {
+    margin-bottom: 30px;
+}
+
+.juegos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.juego-card {
+    background-color: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.juego-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.juego-card h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #16213e;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
