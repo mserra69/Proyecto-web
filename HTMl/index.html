@@ -2,10 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/style.css">
-    <title>Home - Reseñas de Videojuegos</title>
+    <title>Home - GameReview</title>
 </head>
 <body>
 
@@ -26,27 +25,57 @@
 
     <main>
         <section class="hero">
-            <h2>Bienvenido a GameReview</h2>
-            <p>Encuentra las reseñas de afcionados a los videojuegos de tus favoritos.</p>
-            <a href="reseñas.html" class="btn">Ver Reseñas</a>
+            <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+            <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+            <div class="slide">
+                <img src="/img/repo-img.jpg" alt="R.E.P.O">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2>R.E.P.O</h2>
+                    <p>Un shooter estratégico en un mundo distópico donde cada misión es un desafío.</p>
+                    <a href="resenya1.html" class="btn">Leer Reseña</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="/img/r6-img.jpg" alt="Rainbow Six Siege">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2>Rainbow Six Siege</h2>
+                    <p>La táctica es la clave en este shooter multijugador basado en equipos.</p>
+                    <a href="resenya2.html" class="btn">Leer Reseña</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="/img/mariokart8d-img.jpg" alt="Mario Kart 8 Deluxe">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2>Mario Kart 8 Deluxe</h2>
+                    <p>Compite con tus amigos en las pistas más locas</p>
+                    <a href="resenya3.html" class="btn">Leer Reseña</a>
+                </div>
+            </div>
         </section>
+
+        <script src="/Scripts/slide.js"></script>
 
         <section class="destacados">
             <h3>Reseñas Destacadas</h3>
             <div class="juegos-grid">
                 <div class="juego-card">
-                    <img src="img/juego1.jpg" alt="Juego 1">
+                    <img src="/img/repo-img.jpg" alt="Juego 1">
                     <h4><a href="resenya1.html">R.E.P.O</a></h4>
                     <p>PC</p>
                 </div>
                 <div class="juego-card">
-                    <img src="img/juego2.jpg" alt="Juego 2">
+                    <img src="/img/r6-img.jpg" alt="Juego 2">
                     <h4><a href="resenya2.html">Rainbow Six Siege</a></h4>
                     <p>PC | PS4/PS5 | XBOX </p>
                 </div>
                 <div class="juego-card">
-                    <img src="img/juego3.jpg" alt="Juego 3">
-                    <h4><a href="reseña3.html">Mario Kart 8 Deluxe</a></h4>
+                    <img src="/img/mariokart8d-img.jpg" alt="Juego 3">
+                    <h4><a href="resenya3.html">Mario Kart 8 Deluxe</a></h4>
                     <p>Nintendo Switch</p>
                 </div>
             </div>

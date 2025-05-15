@@ -6,119 +6,7 @@ body, html {
     color: #eaeaea;
 }
 
-header {
-    background-color: #16213e;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    color: #00aaff;
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #eaeaea;
-    padding: 8px 16px;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #00aaff;
-    border-radius: 5px;
-}
-
-.hero {
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    background-color: #00aaff;
-    padding: 10px 20px;
-    color: #1a1a2e;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.hero .btn:hover {
-    background-color: #0088cc;
-}
-
-.destacados {
-    padding: 50px 20px;
-    background-color: #0f3460;
-    text-align: center;
-}
-
-.destacados h3 {
-    margin-bottom: 30px;
-}
-
-.juegos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.juego-card {
-    background-color: #16213e;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.juego-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.juego-card h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-footer {
-    background-color: #16213e;
-    padding: 20px;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a2e;
-    color: #eaeaea;
-}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 header {
     background-color: #16213e;
@@ -151,59 +39,203 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-.reseña-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #0f3460;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
 
-.reseña-header {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: #00aaff;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.destacados,
+.reseña-container {
+    padding: 50px 20px;
+    background-color: #0f3460;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.destacados {
+    padding: 50px 20px;
+}
+
+.destacados h3,
+.reseña-info h2 {
     margin-bottom: 30px;
 }
 
+.juegos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.juego-card,
 .reseña-header img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
+    background-color: #16213e;
+    padding: 20px;
     border-radius: 10px;
+    text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.reseña-info {
-    flex-grow: 1;
+.juego-card img,
+.reseña-header img {
+    width: 170px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+.juego-card h4,
 .reseña-info h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.reseña-info p {
-    margin: 5px 0;
-}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.reseña-content h3 {
-    margin-bottom: 10px;
-    color: #00aaff;
-}
 
-.reseña-content p, .reseña-content ul {
+.reseña-header {
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-.reseña-content ul {
-    padding-left: 20px;
+.reseña-header img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 
-.reseña-content ul li {
-    margin-bottom: 5px;
+.reseña-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.reseña-titulo {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #111; /* más oscuro */
+}
+
+.reseña-genero {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555; /* gris oscuro para subtítulos */
+}
+
+.reseña-calificacion {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007acc; /* azul más intenso para destacar */
+}
+
+.reseña-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.reseña-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #111; /* título oscuro */
+}
+
+.reseña-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: left;
+    color: #222; /* texto principal oscuro */
+}
+
+.reseña-calificacion-final {
+    background-color: #16213e;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 
 footer {
     background-color: #16213e;
