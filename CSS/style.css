@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a2e;
+    background-color: #3a668f;
     color: #eaeaea;
 }
 
@@ -112,51 +112,80 @@ header nav ul li a:hover {
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.destacados,
-.reseña-container {
-    padding: 50px 20px;
-    background-color: #0f3460;
-    text-align: center;
-    border-radius: 10px;
+.destacados-grid {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.destacados {
-    padding: 50px 20px;
+.destacados-grid h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #16213e;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 8px;
 }
 
-.destacados h3,
-.reseña-info h2 {
-    margin-bottom: 30px;
-}
-
-.juegos-grid {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
 }
 
-.juego-card,
-.reseña-header img {
-    background-color: #16213e;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+.destacado-card {
+    display: flex;
+    gap: 15px;
+    background-color: #fff;
+    border-radius: 1px;
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
 }
 
-.juego-card img,
-.reseña-header img {
-    width: 170px;
-    height: 250px;
+.destacado-card:hover {
+    transform: translateY(-2px);
+}
+
+.destacado-card img {
+    width: 120px;
+    height: 90px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 1px;
+    flex-shrink: 0;
 }
 
-.juego-card h4,
-.reseña-info h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
+.destacado-card .info {
+    flex: 1;
 }
+
+.destacado-card .info .hora {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.destacado-card .info h4 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.destacado-card .info h4 a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.destacado-card .info h4 a:hover {
+    color: #00aaff;
+}
+
+.destacado-card .resumen {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -174,7 +203,7 @@ header nav ul li a:hover {
     height: 400px;
     object-fit: cover;
     margin-right: 20px;
-    border-radius: 10px;
+    border-radius: 1px;
 }
 
 .reseña-info {
@@ -207,7 +236,7 @@ header nav ul li a:hover {
     background-color: #fff;
     padding: 30px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 1px;
 }
 
 .reseña-content h2 {
